@@ -1,315 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="karli sensibello - developer" />
+	<meta name="keywords" content="web development, karli web development, karli web developer, cleveland web developer" />
 
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Sensibello Design &amp; Development</title>
-
-<!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/favicon2.png" rel="apple-touch-icon">
-
-
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="css/animate.css" rel="stylesheet" />
-  <!-- Squad theme CSS -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="color/default.css" rel="stylesheet">
+	<title>Karli Sensibello - Developer</title>
 
 
 
+	<style>
+	:root {
+		--default: #FFF;
+		--primary: #F5F5F5;
+		--border: rgba(255, 255, 255, .15);
+		--faded: #48345f;
+		--bg: #48345f;
+		--purple: #c9bbd9;
+	}
+
+	@keyframes stagger {
+		from {
+			opacity: 0;
+			transform: translateY(-15px);
+		}
+
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	@keyframes spaz {
+		0% {
+			font-family: serif;
+		}
+
+		33.33% {
+			font-family: sans-serif;
+		}
+
+		66.66% {
+			font-family: monospace;
+		}
+
+		100% {
+			font-family: cursive;
+		}
+	}
+
+	/* ----------------------------------- */
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		color: var(--default);
+		font-size: 2vh;
+		line-height: 1.75;
+		font-family: Arial, sans-serif;
+	}
+
+	body {
+		display: flex;
+		min-height: 100vh;
+		flex-wrap: wrap;
+		align-items: left;
+		justify-content: left;
+		margin: 0;
+		padding: 100px;
+		background: var(--bg);
+	}
+		@media (max-width: 767px) {
+			body {
+				padding: 40px;
+			}
+		}
+
+		body:after {
+			z-index: 100;
+			content: '';
+			pointer-events: none;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border: 10px solid var(--default);
+		}
+
+	::selection {
+		background: #ae98c7;
+;
+	}
+
+	/* ----------------------------------- */
+
+	main * {
+		opacity: 0;
+		animation: stagger 2s ease-in-out forwards;
+	}
+
+	main *:nth-child(1) { animation-delay: -1s; }
+	main *:nth-child(2) { animation-delay: -0.7s; }
+	main *:nth-child(3) { animation-delay: -0.4s; }
+	main *:nth-child(4) { animation-delay: -0.1s; }
+	main *:nth-child(5) { animation-delay: 0.2s; }
+	main *:nth-child(6) { animation-delay: 0.5s; }
+	main *:nth-child(7) { animation-delay: 0.8s; }
+	main *:nth-child(8) { animation-delay: 1.1s; }
+	main *:nth-child(9) { animation-delay: 1.4s; }
+	main *:nth-child(10) { animation-delay: 1.7s; }
+	main *:nth-child(11) { animation-delay: 2s; }
+	main *:nth-child(12) { animation-delay: 2.3s; }
+	main *:nth-child(13) { animation-delay: 2.6s; }
+	main *:nth-child(14) { animation-delay: 2.9s; }
+	main *:nth-child(15) { animation-delay: 3.2s; }
+	main *:nth-child(16) { animation-delay: 3.5s; }
+	main *:nth-child(17) { animation-delay: 3.8s; }
+	main *:nth-child(18) { animation-delay: 4.1s; }
+	main *:nth-child(19) { animation-delay: 4.4s; }
+	main *:nth-child(20) { animation-delay: 4.7s; }
+
+	/* ----------------------------------- */
+
+	#clone {
+		pointer-events: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		filter: grayscale(1) blur(6px) opacity(.23);
+		transform: scaleX(-1);
+		transition: transform 3s linear;
+	}
+		#clone h1 {
+			filter: opacity(.4);
+		}
+
+	/* ----------------------------------- */
+
+	main {
+		margin:50px;
+	}
+		@media (min-width: 1000px) {
+			main {
+				max-width: 95vw;
+			}
+		}
+
+	a {
+		display: inline-block;
+		color: var(--primary);
+		text-decoration: none;
+		transition: .3s ease;
+		background: linear-gradient(to right, var(--purple), var(--purple)) center 105% no-repeat;
+		background-size: 100% 2px;
+	}
+		a:hover {
+			color: var(--primary);
+			background-size: 100% 30px;
+		}
+
+	hgroup {
+		text-align: left;
+	}
+
+	h1 {
+		cursor: default;
+		display: block;
+		position: relative;
+		font-size: 3rem;
+		line-height: 1;
+		margin: 0 auto 10px;
+	}
+
+	h2 {
+		cursor: default;
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		cursor: default;
+		font-size: .8rem;
+	}
+
+	h5 {
+		cursor: default;
+		font-weight: 400;
+		font-size: .8rem;
+		margin: 0;
+	}
+
+	h1:hover:first-letter,
+	h2:hover:first-letter,
+	h3:hover:first-letter,
+	h5:hover:first-letter {
+		color: var(--purple);
+	}
+
+	hr {
+		max-width: 50px;
+		margin: 40px auto;
+		border-top: 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	ul {
+		margin-left: -20px;
+	}
+		ul li {
+			color: var(--faded);
+			list-style-type: lower-roman;
+		}
+
+		ul li:hover {
+			color: var(--primary);
+		}
+
+		ul li p {
+			color: #cecece;
+			margin: 0;
+		}
+        
+    i {
+      margin-right: 20px;
+    }
+
+	@media (min-width: 767px) {
+		.columns {
+			display: flex;
+			align-items: flex-start;
+			width: calc(100% + 200px);
+		}
+			.columns div {
+				width: 50%;
+				padding: 0 15px 0 0;
+			}
+	}
+
+	/* ----------------------------------- */
+
+	article:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	article h3:only-child {
+		margin-bottom: -20px;
+	}
+
+	article h3 time {
+		color: var(--primary);
+		font-weight: 400;
+	}
+	</style>
 </head>
+<body>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  <!-- Preloader -->
-  <div id="preloader">
-    <div id="load"></div>
-  </div>
+<main>
+	<hgroup>
+		<h1>karli sensibello <i class="fas fa-code"></i></h1>
+		<h5>
+			[<a href="mailto:karli@sensibello.com">email</a>
+			, <a href="http://github.com/sensibello" target="_blank" rel="noopener noreferrer">github</a>
+			, <a href="http://linkedin.com/in/karlisensi" target="_blank" rel="noopener noreferrer">linkedin</a>, <a href="http://codepen.io/sensibello" target="_blank" rel="noopener noreferrer">codepen</a>, <a href="http://behance.net/sensibello" target="_blank" rel="noopener noreferrer">behance</a>]
+		</h5>
+	</hgroup>
 
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-        <a class="navbar-brand" href="index.html">
-          <h1>sensibello</h1>
-        </a>
-      </div>
+	<hr />
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#about">Work</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="skills.html">Skills</a></li>
-              <li><a href="aboutme.html">About Me</a></li>
-              <li><a href="http://www.linkedin.com/in/karlisensi">Resume</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-  </nav>
+	<h2>Summary</h2>
+	<p>
+		Developer and designer with extensive experience working with clients all across the US in many different sectors. I pride myself on building beautiful, responsive, and clean websites with intuitive user experiences. I post most of my finished work on <em><a href="http://www.behance.net/sensibello">Behance</a></em> , and alot of my code on <em> <a href="http://codepen.io/sensibello">Codepen</a></em>  and <em><a href="http://github.com/sensibello">Github</a></em> .
+	</p>
 
-  <!-- Section: intro -->
-  <section id="intro" class="intro">
+	<hr />
 
-    <div class="slogan">
-      <h2>Sensibello <span class="text_color"></span> </h2>
-      <h4>Design &amp; development</h4>
-    </div>
-    <div class="page-scroll">
-      <a href="#service" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
-    </div>
-  </section>
-  <!-- /Section: intro -->
+	<div class="columns">
+		<div>
+			<h2>Skills <i class="fas fa-code"></i></h2>
+			<ul>
+				<li><p>Transforming PSD, AI, and Sketch files into HTML/CSS/JS</p></li>
+                <li><p>Building comprehensive wireframes and prototypes </p></li>
+				<li><p>Mobile-first responsive development</p></li>
+				<li><p>Custom WordPress and Shopify development</p></li>
+                <li><p>SEO and AdWords</p></li>
+			</ul>
+		</div>
 
-  <!-- Section: about -->
-    
+		<div>
+			<h2>Technical <i class="fas fa-code"></i></h2>
+			<ul>
+				<li><p>JavaScript, HTML5/CSS3, PHP, Ruby</p></li>
+				<li><p>Node, React, Angular, jQuery</p></li>
+				<li><p>CSS Preprocessors (SASS / LESS)</p></li>
+				<li><p>Responsive Front End Frameworks (w3CSS, Bootstrap)</p></li>
+                <li><p>iOS Swift, Objective-C</p></li>
+				<li><p>WordPress, SquareSpace, Shopify</p></li>
+				<li><p>Photoshop, Illustrator, After Effects, Sketch</p></li>
+			</ul>
+		</div>
+	</div>
 
+	<hr />
 
-    
-  <section id="about" class="home-section text-center">
-    <div class="heading-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>Some of My Work</h2>
-               <a href="https://www.behance.net/sensibello" class="btn btn-default">My Full Portfolio</a>
+	<h2>Work Experience <i class="fas fa-code"></i></h2>
 
-                       <div class="fling-minislide">              
-                        <img src="/img/team/1.png" alt="Slide 4" />
-                        <img src="/img/team/2.png" alt="slide 3" />
-                        <img src="/img/team/3.png" alt="slide 2" />    
-                        <img src="/img/team/4.png" alt="slide 1" />    
-                            
-                    </div>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
+	<article>
+		<h3>
+			<a href="//www.pfi-awards.com" target="_blank" rel="noopener noreferrer">Schaffer Partners</a>,
+			Web Developer, <time>2018 - Present</time>
+		</h3>
+        <ul>
+			<li><p>Primarily working as a front-end web developer with additional moderate back-end development work. </p></li>
+			<li><p>Skills/languages being used: HTML/HTML5, Javascript, CSS/CSS3, W3 Responsive, Bootstrap, Foundation</p></li>
+            <li><p>UI/UX Design and research, cross-browser compatibility. </p></li>
+			<li><p>Working within a template-based, CMS environment. </p></li>
+            <li><p>Creating wireframes to ensure pixel-perfect websites. </p></li>
+			<li><p>Additional skills and languages used: AJAX, XML, jQuery, exposure to back-end languages, desktop support.</p></li>
+	</article>
 
-      
-      
-      <br> <br>
-                  I put a lot of my work on <a href="https://behance.net/Sensibello">Behance</a> in order to showcase as much of work as possible. 
-	    	<br>
-	    
-                  <br>
-                  Take a glance at my <a href="https://github.com/Sensibello">GitHub</a> to see my code and more programming projects.
-  </section>
-  <!-- /Section: about -->
+	<article>
+		<h3>
+			<a>Freelance</a>,
+			iOS/Swift Developer & Designer, <time>Jan. 2016 - Present</time>
+		</h3>
+	
+	</article>
+        
+       
+        
+        <article>
+		<h3>
+			<a>Freelance</a>,
+			Graphic Designer, <time>Jan. 2014 - Present</time>
+		</h3>
 
+		
+	</article>
+        
+        <article>
+		<h3>
+			<a>Freelance</a>,
+			Web Designer & Developer <time>March 2013 - Present</time>
+		</h3>
 
-  <!-- Section: services -->
-  <section id="service" class="home-section text-center bg-gray">
-
-    <div class="heading-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>What I do</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fa fa-code fa-3x" aria-hidden="true"></i>
-              </div>
-              <div class="service-desc">
-                <h5>Development</h5>
-                <p>iOS and Web.
-                  <br> <br>As a developer, I understand the perfect user interface should not only look good, but also work even better. Alongside my clients, I uncover problems and solve them. I aim to create bold and intuitive online experiences for your users.
-                  </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
-              </div>
-              <div class="service-desc">
-                <h5>Design</h5>
-                <p>iOS and Web.
-                  <br><br> I love to solve complicated problems and find simple solutions in various types of environments. A responsive, clean, and intuitive design is what your clients will first see when visiting your site or application.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
-              </div>
-              <div class="service-desc">
-                <h5>Graphics/Branding</h5>
-                <p><br><br>Logos, banners, icons. You name it, I can do it for you. Having a unique icon or logo is what people will remember your business or brand by.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInRight" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-            <i class="fa fa-star-o fa-3x" aria-hidden="true"></i>
-
-              </div>
-              <div class="service-desc">
-                <h5>SEO</h5>
-                <p><br><br>The Internet is a big place. I make sure your website has all the necessary optimizations to leave its mark on the web.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Section: services -->
-
-
-
-
-  <!-- Section: contact -->
-  <section id="contact" class="home-section text-center">
-    <div class="heading-contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>Get in touch</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-     
-
-
-        <div class="col-lg-4">
-          <div class="widget-contact">
-            <br>
-              <h5>Contact info</h5>
-
-            <address>
-				  <strong>Located:</strong><br>
-				  Cleveland, Ohio.
-                <br>
-				  <abbr title="Phone">P:</abbr> (440) 728-4129
-				</address>
-
-            <address>
-				  <strong>Email</strong><br>
-				  <a href="mailto:#">karli@sensibello.com</a>
-				</address>
-            <address>
-				  <strong>I'm on social networks</strong><br>
-                       	<ul class="company-social">
-                             <li class="social-codepen"><a href="http://www.codepen.io/sensibello" target="_blank"><i class="fa fa-code" aria-hidden="true"></i></a></li>
-                            <li class="social-facebook"><a href="https://www.facebook.com/profile.php?id=100011155005895" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="http://twitter.com/karlisensi" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-dribble"><a href="http://www.instagram.com/karlisensi" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                            <li class="social-google"><a href="http://www.linkedin.com/in/karlisensi" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li class="social-github"><a href="http://www.github.com/sensibello" target="_blank"><i class="fa fa-github"></i></a></li>
-                           
-                        </ul>
-				</address>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- /Section: contact -->
-
- <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-lg-12">
-          <div class="wow shake" data-wow-delay="0.4s">
-            <div class="page-scroll marginbot-30">
-              <a href="#intro" id="totop" class="btn btn-circle">
-							<i class="fa fa-angle-double-up animated"></i>
-						</a>
-            </div>
-          </div>
-          <p>&copy;</p>
-          <div class="credits">
-            <!--
-              Theme modified using bootstrap
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Squadfree
-            -->
+		
+	</article>
+        
+        <hr />
+        
+        <article> 
+        
+            <a href="http://github.com/sensibello"><i class="fab fa-github fa-2x"></i></a>  
+            <a href="http://linkedin.com/in/karlisensi"><i class="fab fa-linkedin-in fa-2x"></i></a>  
+            <a href="http://codepen.io/sensibello"><i class="fab fa-codepen fa-2x"></i></a>  
+            <a href="http://behance.net/sensibello"><i class="fab fa-behance fa-2x"></i> </a> 
+            <a href="http://instagram.com/karlisensi"><i class="fab fa-instagram fa-2x"></i> </a> 
+            <a href="http://twitter.com/karlisensi"><i class="fab fa-twitter fa-2x"></i> </a> 
             
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+        </article>   
+	
+</main>
 
-  <!-- Core JavaScript Files -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.scrollTo.js"></script>
-  <script src="js/wow.min.js"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+<script>
+(function() {
+	const $clone = document.querySelector('main').cloneNode(true)
+	$clone.id = 'clone'
+	document.body.appendChild($clone)
+
+	document.addEventListener('disabled.mousemove', e => {
+		const
+			f = 0.065,
+			x = (-e.pageX / 2) * f,
+			y = (-e.pageY / 2) * f
+
+		$clone.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`
+	})
+})();
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54705302-1', 'auto');
+ga('send', 'pageview');
+</script>
 
 </body>
-
 </html>
