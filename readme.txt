@@ -1,3 +1,7 @@
 Sensibello.com
 by Karli Sensibello
-Theme inspo: https://bootstrapmade.com
+
+Includes my primary theme (index.html)
+as well as older sites (e.g.: sensi > index.html or sensibello.com/sensi)
+
+basically this has turned into a playground for me whenever I decide to change my website.
